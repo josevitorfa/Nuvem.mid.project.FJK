@@ -1,0 +1,53 @@
+# =============================================================================
+# php-apache-hpa.yaml
+# -----------------------------------------------------------------------------
+# Horizontal Pod Autoscaler (HPA) — o coração deste trabalho.
+#
+# O HPA observa continuamente a métrica de CPU dos Pods do Deployment
+# php-apache (fornecida pelo Metrics Server) e ajusta automaticamente o número
+# de réplicas para manter a utilização média próxima da meta (50%).
+#
+# Equivale ao comando imperativo:
+#   kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+# Mas em forma declarativa (versionável no Git), como pede o enunciado.
+#
+# Usamos autoscaling/v2 (API estável e atual) em vez da v1 antiga, pois ela
+# permite múltiplas métricas e o bloco "behavior" (ajuste fino de subida/descida).
+# =============================================================================
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: php-apache
+spec:
+  # Qual objeto será escalado:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: php-apache
+  minReplicas: 1            # Nunca menos de 1 Pod
+  maxReplicas: 10           # Nunca mais de 10 Pods (limite do walkthrough oficial)
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50   # Meta: manter a CPU média em ~50% do "requests"
+  # ---------------------------------------------------------------------------
+  # (Opcional, mas recomendado no artigo) Ajuste do comportamento de escala.
+  # Deixa a subida rápida (reage à carga) e a descida mais lenta/estável,
+  # evitando "flapping" (subir e descer o tempo todo).
+  # ---------------------------------------------------------------------------
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 0     # Sobe imediatamente ao detectar carga
+      policies:
+        - type: Percent
+          value: 100                    # Pode dobrar o nº de Pods...
+          periodSeconds: 15             # ...a cada 15s
+    scaleDown:
+      stabilizationWindowSeconds: 300   # Espera 5 min de estabilidade antes de reduzir
+      policies:
+        - type: Percent
+          value: 50                     # Reduz no máximo 50% dos Pods...
+          periodSeconds: 60             # ...a cada 60s

@@ -1,0 +1,12 @@
+# Credenciais e configs locais (NUNCA versionar)
+.kube/
+kubeconfig*
+*.pem
+.env
+aws-credentials*
+
+# Artefatos temporários
+*.log
+*.tmp
+
+!evidencias/**/*.log

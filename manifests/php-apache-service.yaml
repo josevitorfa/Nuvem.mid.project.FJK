@@ -1,0 +1,26 @@
+# =============================================================================
+# php-apache-service.yaml
+# -----------------------------------------------------------------------------
+# Service do tipo ClusterIP que expõe o Deployment php-apache DENTRO do cluster.
+#
+# Por que ClusterIP (e não LoadBalancer/NodePort)?
+#   O gerador de carga roda como um Pod DENTRO do próprio cluster e acessa o
+#   servidor pelo nome "php-apache" (DNS interno do Kubernetes). Não precisamos
+#   expor para a internet só para gerar carga — isso simplifica e vale tanto no
+#   Minikube quanto no EKS. (Se quiser abrir para fora, veja a observação no
+#   roteiro sobre "minikube service" e sobre o tipo LoadBalancer no EKS.)
+# =============================================================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: php-apache          # O DNS interno vira: http://php-apache (no mesmo namespace)
+  labels:
+    app: php-apache
+spec:
+  type: ClusterIP           # Acessível apenas dentro do cluster
+  ports:
+    - port: 80              # Porta do Service
+      targetPort: 80        # Porta do container de destino
+      protocol: TCP
+  selector:
+    app: php-apache         # Encaminha o tráfego para os Pods com este rótulo

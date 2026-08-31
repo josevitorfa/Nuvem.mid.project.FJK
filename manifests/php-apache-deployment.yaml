@@ -1,0 +1,47 @@
+# =============================================================================
+# php-apache-deployment.yaml
+# -----------------------------------------------------------------------------
+# Deployment do servidor web que será o ALVO do autoescalamento (HPA).
+#
+# Usamos a imagem oficial "registry.k8s.io/hpa-example", a mesma do walkthrough
+# oficial do Kubernetes (Referência 1 do enunciado). Ela roda um Apache + PHP
+# que executa um cálculo matemático pesado a cada requisição, gerando consumo
+# de CPU proporcional ao tráfego — ideal para provocar e observar o HPA.
+#
+# Ponto-chave para o HPA funcionar:
+#   O HPA calcula a utilização de CPU em relação ao "requests.cpu" definido
+#   aqui. SEM "requests.cpu" o HPA NÃO consegue calcular a porcentagem e fica
+#   com <unknown>. Por isso o campo resources é OBRIGATÓRIO neste trabalho.
+# =============================================================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-apache          # Nome do Deployment (referenciado pelo Service e pelo HPA)
+  labels:
+    app: php-apache
+spec:
+  replicas: 1               # Começamos com 1 réplica; o HPA vai ajustar a partir daqui
+  selector:
+    matchLabels:
+      app: php-apache       # Seleciona os Pods gerenciados por este Deployment
+  template:
+    metadata:
+      labels:
+        app: php-apache     # Rótulo aplicado aos Pods (usado pelo Service e pelo selector)
+    spec:
+      containers:
+        - name: php-apache
+          image: registry.k8s.io/hpa-example   # Imagem oficial de demonstração do HPA
+          ports:
+            - containerPort: 80                 # Apache escuta na porta 80 dentro do Pod
+          resources:
+            # "requests" = recursos garantidos e BASE de cálculo do HPA.
+            # Com request de 200m (0,2 vCPU) e meta de 50%, o HPA escala quando
+            # o uso médio passar de ~100m por Pod.
+            requests:
+              cpu: 200m
+              memory: 64Mi
+            # "limits" = teto de recursos que o container pode consumir.
+            limits:
+              cpu: 500m
+              memory: 128Mi

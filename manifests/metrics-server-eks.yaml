@@ -1,0 +1,30 @@
+# =============================================================================
+# metrics-server-eks.yaml  (INSTRUÇÕES — não é um manifesto para editar)
+# -----------------------------------------------------------------------------
+# O HPA depende do METRICS SERVER para obter o uso de CPU/memória dos Pods.
+#
+#   * MINIKUBE (Implantação A): NÃO use este arquivo. Basta habilitar o addon:
+#         minikube addons enable metrics-server
+#     (o Minikube já traz o Metrics Server pronto, só precisa ativar).
+#
+#   * AWS EKS (Implantação B): o EKS NÃO vem com Metrics Server. Instale a
+#     versão oficial mantida pela comunidade (SIG) aplicando o manifesto
+#     publicado no repositório oficial:
+#
+#         kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+#
+#     Verifique se subiu corretamente:
+#         kubectl get deployment metrics-server -n kube-system
+#         kubectl top nodes      # deve retornar uso de CPU/memória dos nós
+#         kubectl top pods       # deve retornar uso dos Pods
+#
+# -----------------------------------------------------------------------------
+# OBSERVAÇÃO sobre TLS (caso "kubectl top" fique travado no Minikube):
+#   Em alguns ambientes locais o Metrics Server reclama de certificado dos
+#   kubelets. A solução acadêmica comum é adicionar a flag
+#   "--kubelet-insecure-tls" ao Deployment do metrics-server. NÃO faça isso em
+#   produção — é apenas para o ambiente de teste local. Comando:
+#
+#     kubectl patch deployment metrics-server -n kube-system --type='json' \
+#       -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--kubelet-insecure-tls"}]'
+# =============================================================================
