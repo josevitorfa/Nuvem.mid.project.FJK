@@ -1,0 +1,58 @@
+% Gerado por scripts/11-analyze.py -- nao editar a mao.
+% Tabela 1: descritivas por ambiente.
+\begin{table*}[!t]
+\centering
+\caption{Estatísticas descritivas das repetições (IC de 95\,\% da média por bootstrap, $B=20000$).}
+\label{tab:descritivas}
+\footnotesize
+\begin{tabular}{@{}llrrrrrrr@{}}
+\toprule
+\textbf{Métrica} & \textbf{Ambiente} & $n$ & \textbf{Média} & \textbf{DP} & \textbf{CV} & \textbf{Mediana} & \textbf{IIQ} & \textbf{IC 95\%}\\
+\midrule
+Tempo de reação do HPA (s) & Minikube & 20 & 40.8 & 18.5 & 0.45 & 33.5 & 30.8--41.5 & [33.5, 49.2]\\
+Tempo de reação do HPA (s) & EKS & 20 & 24.7 & 5.9 & 0.24 & 24.5 & 21.8--27.2 & [22.1, 27.3]\\
+\addlinespace
+Tempo até o regime permanente (s) & Minikube & 20 & 197.6 & 23.1 & 0.12 & 204.5 & 181.2--218.0 & [187.6, 207.1]\\
+Tempo até o regime permanente (s) & EKS & 20 & 83.0 & 46.7 & 0.56 & 69.5 & 57.8--83.2 & [65.8, 105.8]\\
+\addlinespace
+Réplicas no regime permanente & Minikube & 20 & 6.0 & 0.4 & 0.07 & 6.0 & 6.0--6.0 & [5.9, 6.2]\\
+Réplicas no regime permanente & EKS & 20 & 6.7 & 0.6 & 0.09 & 7.0 & 6.0--7.0 & [6.4, 6.9]\\
+\addlinespace
+CPU de pico observada (\%) & Minikube & 20 & 176.5 & 37.5 & 0.21 & 167.0 & 159.8--179.2 & [161.4, 193.6]\\
+CPU de pico observada (\%) & EKS & 20 & 236.2 & 21.5 & 0.09 & 244.0 & 232.0--250.0 & [226.1, 244.2]\\
+\addlinespace
+Partida do gerador de carga (s) & Minikube & 20 & 2.4 & 1.0 & 0.41 & 2.0 & 2.0--3.0 & [2.0, 2.8]\\
+Partida do gerador de carga (s) & EKS & 20 & 1.8 & 0.4 & 0.25 & 2.0 & 1.8--2.0 & [1.6, 1.9]\\
+\addlinespace
+Retorno ao mínimo após a carga (s) & Minikube & 3 & 453.0 & 6.9 & 0.02 & 449.0 & 449.0--455.0 & [449.0, 461.0]\\
+Retorno ao mínimo após a carga (s) & EKS & 3 & 388.7 & 10.7 & 0.03 & 383.0 & 382.5--392.0 & [382.0, 401.0]\\
+\addlinespace
+Latência de leitura do \emph{API server} (ms) & Minikube & 20 & 108.8 & 3.4 & 0.03 & 108.0 & 106.8--111.2 & [107.4, 110.3]\\
+Latência de leitura do \emph{API server} (ms) & EKS & 20 & 547.4 & 53.6 & 0.10 & 519.5 & 516.2--550.5 & [527.0, 571.7]\\
+\addlinespace
+Latência de escrita no \emph{control plane} (ms) & Minikube & 20 & 464.8 & 575.5 & 1.24 & 197.5 & 147.5--617.8 & [258.4, 743.6]\\
+Latência de escrita no \emph{control plane} (ms) & EKS & 20 & 555.2 & 57.1 & 0.10 & 525.5 & 521.5--559.5 & [532.5, 581.0]\\
+\addlinespace
+Parcela de armazenamento em ms (escrita $-$ leitura) & Minikube & 20 & 355.9 & 576.1 & 1.62 & 92.0 & 33.2--511.5 & [149.7, 630.2]\\
+Parcela de armazenamento em ms (escrita $-$ leitura) & EKS & 20 & 7.8 & 14.2 & 1.81 & 6.0 & 2.8--8.0 & [3.0, 14.8]\\
+\addlinespace
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% Tabela 2: testes de hipotese.
+\begin{table*}[!t]
+\centering
+\caption{Testes de hipótese, Minikube vs.\ EKS.}
+\label{tab:testes}
+\footnotesize
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Teste} & \textbf{Estatística} & $p$ & \textbf{Tamanho de efeito}\\
+\midrule
+Mann--Whitney $U$ (tempo de reação) & $U=52.0$, $z=-3.99$ & 0.0001 & $\delta=0.740$ (grande)\\
+Permutação (diferença de medianas) & $\Delta=9.0$\,s & 0.0004 & --\\
+Permutação (razão de dispersões) & razão de MAD $=1.33$ & 0.4098 & --\\
+\bottomrule
+\end{tabular}
+\end{table*}

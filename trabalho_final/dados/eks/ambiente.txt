@@ -1,0 +1,37 @@
+# Ambiente da campanha - eks
+data_inicio: 2026-09-24T07:06:02Z
+contexto_kubectl: hpa-final
+n_execucoes: 20
+load_seconds: 240
+sample_interval: 2
+desvio_relogio_s: -1
+latencia_control_plane_leitura_escrita_ms: 519 528
+
+## versoes
+  Client Version: v1.36.1
+  Kustomize Version: v5.8.1
+  Server Version: v1.34.11-eks-4cc7921
+
+## nos
+  NAME                             STATUS   ROLES    AGE    VERSION                INTERNAL-IP      EXTERNAL-IP      OS-IMAGE                        KERNEL-VERSION                     CONTAINER-RUNTIME
+  ip-192-168-22-142.ec2.internal   Ready    <none>   130m   v1.34.11-eks-a887778   192.168.22.142   100.52.219.161   Amazon Linux 2023.12.20260914   6.12.103-127.188.amzn2023.x86_64   containerd://2.2.7+unknown
+  ip-192-168-55-127.ec2.internal   Ready    <none>   130m   v1.34.11-eks-a887778   192.168.55.127   52.207.213.55    Amazon Linux 2023.12.20260914   6.12.103-127.188.amzn2023.x86_64   containerd://2.2.7+unknown
+
+## capacidade alocavel
+  NO                               CPU_ALOC   MEM_ALOC    INSTANCIA   ZONA
+  ip-192-168-22-142.ec2.internal   1930m      1466644Ki   t3.small    us-east-1f
+  ip-192-168-55-127.ec2.internal   1930m      1466644Ki   t3.small    us-east-1b
+
+## metrics api
+  v1beta1.metrics.k8s.io   kube-system/metrics-server   True   128m
+
+## objetos aplicados
+  NAME                         READY   UP-TO-DATE   AVAILABLE   AGE    CONTAINERS   IMAGES                        SELECTOR
+  deployment.apps/php-apache   1/1     1            1           127m   php-apache   registry.k8s.io/hpa-example   app=php-apache
+  
+  NAME                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE    SELECTOR
+  service/kubernetes   ClusterIP   10.100.0.1       <none>        443/TCP   136m   <none>
+  service/php-apache   ClusterIP   10.100.136.131   <none>        80/TCP    127m   app=php-apache
+  
+  NAME                                             REFERENCE               TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+  horizontalpodautoscaler.autoscaling/php-apache   Deployment/php-apache   cpu: 0%/50%   1         10        1          127m

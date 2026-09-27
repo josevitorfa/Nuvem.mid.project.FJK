@@ -1,0 +1,19 @@
+metrica,ambiente,n,media,desvio_padrao,cv,min,q1,mediana,q3,max,mad,ic95_media_baixo,ic95_media_alto
+Tempo de reacao do HPA (s),minikube,20,40.750,18.453,0.4528,19.0,30.75,33.5,41.5,87.0,4.0,33.500,49.200
+Tempo de reacao do HPA (s),eks,20,24.700,5.948,0.2408,14.0,21.75,24.5,27.25,36.0,3.0,22.150,27.300
+Tempo ate o regime permanente (s),minikube,20,197.600,23.125,0.1170,155,181.25,204.5,218.0,225,15.5,187.550,207.101
+Tempo ate o regime permanente (s),eks,20,83.000,46.703,0.5627,47,57.75,69.5,83.25,241,13.0,65.750,105.751
+Replicas no regime permanente,minikube,20,6.050,0.394,0.0651,5,6.0,6.0,6.0,7,0.0,5.900,6.200
+Replicas no regime permanente,eks,20,6.650,0.587,0.0883,6,6.0,7.0,7.0,8,0.0,6.400,6.900
+CPU de pico observada (%),minikube,20,176.500,37.495,0.2124,130.0,159.75,167.0,179.25,250.0,8.5,161.450,193.600
+CPU de pico observada (%),eks,20,236.200,21.481,0.0909,176.0,232.0,244.0,250.0,251.0,6.0,226.050,244.250
+Partida do gerador de carga (s),minikube,20,2.400,0.995,0.4145,1,2.0,2.0,3.0,4,1.0,2.000,2.800
+Partida do gerador de carga (s),eks,20,1.750,0.444,0.2539,1,1.75,2.0,2.0,2,0.0,1.550,1.900
+Retorno ao minimo apos a carga (s),minikube,3,453.000,6.928,0.0153,449.0,449.0,449.0,455.0,461.0,0.0,449.000,461.000
+Retorno ao minimo apos a carga (s),eks,3,388.667,10.693,0.0275,382.0,382.5,383.0,392.0,401.0,1.0,382.000,401.000
+Latencia de leitura do apiserver (ms),minikube,20,108.800,3.365,0.0309,104.0,106.75,108.0,111.25,115.0,2.0,107.400,110.300
+Latencia de leitura do apiserver (ms),eks,20,547.400,53.629,0.0980,510.0,516.25,519.5,550.5,652.0,6.0,527.000,571.700
+Latencia de escrita no control plane (ms),minikube,20,464.750,575.508,1.2383,114.0,147.5,197.5,617.75,2534.0,64.5,258.350,743.600
+Latencia de escrita no control plane (ms),eks,20,555.250,57.120,0.1029,517.0,521.5,525.5,559.5,683.0,5.5,532.549,581.050
+Parcela de armazenamento em ms (escrita menos leitura),minikube,20,355.950,576.057,1.6184,8.0,33.25,92.0,511.5,2425.0,72.0,149.700,630.201
+Parcela de armazenamento em ms (escrita menos leitura),eks,20,7.850,14.236,1.8135,-7.0,2.75,6.0,8.0,62.0,2.5,2.950,14.751

@@ -1,0 +1,198 @@
+[23:19:06] ############################################################
+[23:19:06] # Campanha minikube: 20 repeticoes x 240s de carga
+[23:19:06] # Amostragem a cada 2s | scale-down natural nas 3 primeiras
+[23:19:06] ############################################################
+[23:19:06] contexto kubectl: minikube
+[23:19:18] ambiente registrado em dados/minikube/ambiente.txt
+[23:19:18] aquecendo o cache de imagens em todos os nos...
+[23:19:32]    imagens em cache em todos os nos
+[23:19:39] == repeticao 01/20 (minikube) ==
+[23:19:40]    aguardando estado de base...
+[23:20:33]    base atingida (cpu=0%, replicas=1)
+[23:20:41]    latencia do control plane: leitura 108ms | escrita 440ms
+[23:20:47]    carga em execucao desde 2026-09-24T02:20:46Z (submissao->execucao: 3s)
+[23:21:18]    1a decisao de escala em 2026-09-24T02:21:16Z -> reacao = 30s
+[23:24:53]    carga encerrada apos 240s
+[23:24:53]    medindo o scale-down natural (janela de estabilizacao de 300s)...
+[23:32:16]    retorno a 1 replica em 449s
+[23:32:17]    repeticao 01 concluida
+[23:32:17]    tempo total de campanha ate aqui: 12min
+[23:32:17] == repeticao 02/20 (minikube) ==
+[23:32:19]    aguardando estado de base...
+[23:32:30]    base atingida (cpu=0%, replicas=1)
+[23:32:38]    latencia do control plane: leitura 110ms | escrita 1135ms
+[23:32:44]    carga em execucao desde 2026-09-24T02:32:43Z (submissao->execucao: 3s)
+[23:33:16]    1a decisao de escala em 2026-09-24T02:33:14Z -> reacao = 31s
+[23:36:51]    carga encerrada apos 240s
+[23:36:51]    medindo o scale-down natural (janela de estabilizacao de 300s)...
+[23:44:25]    retorno a 1 replica em 461s
+[23:44:26]    repeticao 02 concluida
+[23:44:26]    tempo total de campanha ate aqui: 24min
+[23:44:26] == repeticao 03/20 (minikube) ==
+[23:44:28]    aguardando estado de base...
+[23:44:39]    base atingida (cpu=0%, replicas=1)
+[23:44:45]    latencia do control plane: leitura 104ms | escrita 195ms
+[23:44:50]    carga em execucao desde 2026-09-24T02:44:50Z (submissao->execucao: 2s)
+[23:45:10]    1a decisao de escala em 2026-09-24T02:45:09Z -> reacao = 19s
+[23:48:57]    carga encerrada apos 240s
+[23:48:57]    medindo o scale-down natural (janela de estabilizacao de 300s)...
+[23:56:19]    retorno a 1 replica em 449s
+[23:56:20]    repeticao 03 concluida
+[23:56:20]    tempo total de campanha ate aqui: 36min
+[23:56:20] == repeticao 04/20 (minikube) ==
+[23:56:21]    aguardando estado de base...
+[23:56:32]    base atingida (cpu=0%, replicas=1)
+[23:56:40]    latencia do control plane: leitura 107ms | escrita 920ms
+[23:56:46]    carga em execucao desde 2026-09-24T02:56:44Z (submissao->execucao: 2s)
+[23:57:18]    1a decisao de escala em 2026-09-24T02:57:16Z -> reacao = 32s
+[00:00:52]    carga encerrada apos 240s
+[00:00:55]    repeticao 04 concluida
+[00:00:55]    tempo total de campanha ate aqui: 41min
+[00:00:55] == repeticao 05/20 (minikube) ==
+[00:00:56]    aguardando estado de base...
+[00:02:20]    base atingida (cpu=0%, replicas=1)
+[00:02:31]    latencia do control plane: leitura 104ms | escrita 769ms
+[00:02:36]    carga em execucao desde 2026-09-24T03:02:34Z (submissao->execucao: 1s)
+[00:03:10]    1a decisao de escala em 2026-09-24T03:03:09Z -> reacao = 35s
+[00:06:42]    carga encerrada apos 240s
+[00:06:43]    repeticao 05 concluida
+[00:06:43]    tempo total de campanha ate aqui: 47min
+[00:06:43] == repeticao 06/20 (minikube) ==
+[00:06:44]    aguardando estado de base...
+[00:08:29]    base atingida (cpu=0%, replicas=1)
+[00:08:41]    latencia do control plane: leitura 107ms | escrita 752ms
+[00:08:48]    carga em execucao desde 2026-09-24T03:08:46Z (submissao->execucao: 3s)
+[00:09:15]    1a decisao de escala em 2026-09-24T03:09:15Z -> reacao = 29s
+[00:12:54]    carga encerrada apos 240s
+[00:12:56]    repeticao 06 concluida
+[00:12:56]    tempo total de campanha ate aqui: 53min
+[00:12:56] == repeticao 07/20 (minikube) ==
+[00:12:57]    aguardando estado de base...
+[00:14:31]    base atingida (cpu=0%, replicas=1)
+[00:14:40]    latencia do control plane: leitura 108ms | escrita 225ms
+[00:14:45]    carga em execucao desde 2026-09-24T03:14:44Z (submissao->execucao: 2s)
+[00:15:17]    1a decisao de escala em 2026-09-24T03:15:16Z -> reacao = 32s
+[00:18:51]    carga encerrada apos 240s
+[00:18:52]    repeticao 07 concluida
+[00:18:52]    tempo total de campanha ate aqui: 59min
+[00:18:52] == repeticao 08/20 (minikube) ==
+[00:18:53]    aguardando estado de base...
+[00:20:17]    base atingida (cpu=0%, replicas=1)
+[00:20:25]    latencia do control plane: leitura 106ms | escrita 573ms
+[00:20:34]    carga em execucao desde 2026-09-24T03:20:31Z (submissao->execucao: 4s)
+[00:21:07]    1a decisao de escala em 2026-09-24T03:21:05Z -> reacao = 34s
+[00:24:37]    carga encerrada apos 240s
+[00:24:37]    repeticao 08 concluida
+[00:24:37]    tempo total de campanha ate aqui: 64min
+[00:24:37] == repeticao 09/20 (minikube) ==
+[00:24:38]    aguardando estado de base...
+[00:26:20]    base atingida (cpu=0%, replicas=1)
+[00:26:22]    latencia do control plane: leitura 106ms | escrita 114ms
+[00:26:26]    carga em execucao desde 2026-09-24T03:26:26Z (submissao->execucao: 1s)
+[00:27:08]    1a decisao de escala em 2026-09-24T03:27:07Z -> reacao = 41s
+[00:30:44]    carga encerrada apos 240s
+[00:30:46]    repeticao 09 concluida
+[00:30:46]    tempo total de campanha ate aqui: 71min
+[00:30:46] == repeticao 10/20 (minikube) ==
+[00:30:47]    aguardando estado de base...
+[00:34:20]    base atingida (cpu=0%, replicas=1)
+[00:35:16]    latencia do control plane: leitura 109ms | escrita 2534ms
+[00:35:21]    carga em execucao desde 2026-09-24T03:35:20Z (submissao->execucao: 2s)
+[00:36:27]    1a decisao de escala em 2026-09-24T03:36:22Z -> reacao = 62s
+[00:39:27]    carga encerrada apos 240s
+[00:39:28]    repeticao 10 concluida
+[00:39:28]    tempo total de campanha ate aqui: 79min
+[00:39:28] == repeticao 11/20 (minikube) ==
+[00:39:28]    aguardando estado de base...
+[00:41:28]    base atingida (cpu=0%, replicas=1)
+[00:41:31]    latencia do control plane: leitura 115ms | escrita 133ms
+[00:41:36]    carga em execucao desde 2026-09-24T03:41:34Z (submissao->execucao: 1s)
+[00:42:20]    1a decisao de escala em 2026-09-24T03:42:17Z -> reacao = 43s
+[00:46:20]    carga encerrada apos 240s
+[00:46:21]    repeticao 11 concluida
+[00:46:21]    tempo total de campanha ate aqui: 86min
+[00:46:21] == repeticao 12/20 (minikube) ==
+[00:46:25]    aguardando estado de base...
+[00:47:45]    base atingida (cpu=0%, replicas=1)
+[00:47:55]    latencia do control plane: leitura 112ms | escrita 127ms
+[00:48:02]    carga em execucao desde 2026-09-24T03:47:59Z (submissao->execucao: 1s)
+[00:49:18]    1a decisao de escala em 2026-09-24T03:49:15Z -> reacao = 76s
+[00:52:45]    carga encerrada apos 240s
+[00:52:46]    repeticao 12 concluida
+[00:52:46]    tempo total de campanha ate aqui: 93min
+[00:52:47] == repeticao 13/20 (minikube) ==
+[00:52:47]    aguardando estado de base...
+[00:54:38]    base atingida (cpu=0%, replicas=1)
+[00:55:07]    latencia do control plane: leitura 112ms | escrita 174ms
+[00:55:14]    carga em execucao desde 2026-09-24T03:55:12Z (submissao->execucao: 3s)
+[00:56:30]    1a decisao de escala em 2026-09-24T03:56:25Z -> reacao = 73s
+[00:59:26]    carga encerrada apos 240s
+[00:59:40]    repeticao 13 concluida
+[00:59:40]    tempo total de campanha ate aqui: 100min
+[00:59:40] == repeticao 14/20 (minikube) ==
+[01:00:16]    aguardando estado de base...
+[01:01:43]    base atingida (cpu=0%, replicas=1)
+[01:01:48]    latencia do control plane: leitura 114ms | escrita 149ms
+[01:01:55]    carga em execucao desde 2026-09-24T04:01:53Z (submissao->execucao: 3s)
+[01:03:22]    1a decisao de escala em 2026-09-24T04:03:20Z -> reacao = 87s
+[01:06:50]    carga encerrada apos 240s
+[01:06:52]    repeticao 14 concluida
+[01:06:52]    tempo total de campanha ate aqui: 107min
+[01:06:52] == repeticao 15/20 (minikube) ==
+[01:06:53]    aguardando estado de base...
+[01:08:42]    base atingida (cpu=0%, replicas=1)
+[01:08:45]    latencia do control plane: leitura 115ms | escrita 143ms
+[01:08:50]    carga em execucao desde 2026-09-24T04:08:49Z (submissao->execucao: 2s)
+[01:09:19]    1a decisao de escala em 2026-09-24T04:09:16Z -> reacao = 27s
+[01:12:56]    carga encerrada apos 240s
+[01:12:59]    repeticao 15 concluida
+[01:12:59]    tempo total de campanha ate aqui: 113min
+[01:12:59] == repeticao 16/20 (minikube) ==
+[01:13:00]    aguardando estado de base...
+[01:14:31]    base atingida (cpu=0%, replicas=1)
+[01:14:37]    latencia do control plane: leitura 111ms | escrita 133ms
+[01:14:45]    carga em execucao desde 2026-09-24T04:14:42Z (submissao->execucao: 3s)
+[01:15:16]    1a decisao de escala em 2026-09-24T04:15:15Z -> reacao = 33s
+[01:18:53]    carga encerrada apos 240s
+[01:18:55]    repeticao 16 concluida
+[01:18:55]    tempo total de campanha ate aqui: 119min
+[01:18:55] == repeticao 17/20 (minikube) ==
+[01:18:57]    aguardando estado de base...
+[01:20:18]    base atingida (cpu=0%, replicas=1)
+[01:20:25]    latencia do control plane: leitura 106ms | escrita 190ms
+[01:20:30]    carga em execucao desde 2026-09-24T04:20:29Z (submissao->execucao: 2s)
+[01:21:05]    1a decisao de escala em 2026-09-24T04:21:04Z -> reacao = 35s
+[01:24:37]    carga encerrada apos 240s
+[01:24:40]    repeticao 17 concluida
+[01:24:40]    tempo total de campanha ate aqui: 125min
+[01:24:40] == repeticao 18/20 (minikube) ==
+[01:24:42]    aguardando estado de base...
+[01:26:25]    base atingida (cpu=0%, replicas=1)
+[01:26:32]    latencia do control plane: leitura 108ms | escrita 180ms
+[01:26:39]    carga em execucao desde 2026-09-24T04:26:38Z (submissao->execucao: 4s)
+[01:27:12]    1a decisao de escala em 2026-09-24T04:27:11Z -> reacao = 33s
+[01:30:46]    carga encerrada apos 240s
+[01:30:49]    repeticao 18 concluida
+[01:30:49]    tempo total de campanha ate aqui: 131min
+[01:30:49] == repeticao 19/20 (minikube) ==
+[01:30:51]    aguardando estado de base...
+[01:32:32]    base atingida (cpu=0%, replicas=1)
+[01:32:40]    latencia do control plane: leitura 107ms | escrita 209ms
+[01:32:49]    carga em execucao desde 2026-09-24T04:32:47Z (submissao->execucao: 4s)
+[01:33:16]    1a decisao de escala em 2026-09-24T04:33:15Z -> reacao = 28s
+[01:36:55]    carga encerrada apos 240s
+[01:36:56]    repeticao 19 concluida
+[01:36:57]    tempo total de campanha ate aqui: 137min
+[01:36:57] == repeticao 20/20 (minikube) ==
+[01:36:57]    aguardando estado de base...
+[01:38:21]    base atingida (cpu=0%, replicas=1)
+[01:38:27]    latencia do control plane: leitura 107ms | escrita 200ms
+[01:38:32]    carga em execucao desde 2026-09-24T04:38:31Z (submissao->execucao: 2s)
+[01:39:07]    1a decisao de escala em 2026-09-24T04:39:06Z -> reacao = 35s
+[01:42:37]    carga encerrada apos 240s
+[01:42:39]    repeticao 20 concluida
+[01:42:39]    tempo total de campanha ate aqui: 143min
+[01:42:39] ############################################################
+[01:42:39] # Campanha minikube concluida em 143 min
+[01:42:39] # Dados em dados/minikube/
+[01:42:40] ############################################################

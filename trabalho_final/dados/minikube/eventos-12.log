@@ -1,0 +1,22 @@
+LAST SEEN   TYPE      REASON                         OBJECT                               MESSAGE
+57m         Normal    ScalingReplicaSet              deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 6 to 3
+57m         Normal    SuccessfulRescale              horizontalpodautoscaler/php-apache   New size: 3; reason: All metrics below target
+56m         Normal    SuccessfulRescale              horizontalpodautoscaler/php-apache   New size: 1; reason: All metrics below target
+56m         Normal    ScalingReplicaSet              deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 3 to 1
+54m         Normal    ScalingReplicaSet              deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 2 to 4
+49m         Normal    SuccessfulRescale              horizontalpodautoscaler/php-apache   New size: 3; reason: cpu resource utilization (percentage of request) above target
+49m         Normal    ScalingReplicaSet              deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 2 to 3
+36m         Normal    SuccessfulRescale              horizontalpodautoscaler/php-apache   New size: 4; reason: cpu resource utilization (percentage of request) above target
+34m         Normal    SuccessfulRescale              horizontalpodautoscaler/php-apache   New size: 6; reason: cpu resource utilization (percentage of request) above target
+28m         Normal    ScalingReplicaSet              deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 6 to 1
+23m         Normal    ScalingReplicaSet              deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 4 to 6
+20m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/php-apache   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+20m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/php-apache   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+19m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/php-apache   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+19m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/php-apache   failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+14m         Warning   FailedUpdateStatus             horizontalpodautoscaler/php-apache   etcdserver: request timed out
+8m25s       Warning   FailedRescale                  horizontalpodautoscaler/php-apache   New size: 6; reason: cpu resource utilization (percentage of request) above target; error: etcdserver: request timed out
+8m22s       Normal    ScalingReplicaSet              deployment/php-apache                (combined from similar events): Scaled up replica set php-apache-5554b974cc from 3 to 6
+5m48s       Warning   FailedUpdateStatus             horizontalpodautoscaler/php-apache   Operation cannot be fulfilled on horizontalpodautoscalers.autoscaling "php-apache": the object has been modified; please apply your changes to the latest version and try again
+3m31s       Normal    SuccessfulRescale              horizontalpodautoscaler/php-apache   New size: 2; reason: cpu resource utilization (percentage of request) above target
+3m30s       Normal    ScalingReplicaSet              deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 1 to 2

@@ -1,0 +1,11 @@
+LAST SEEN   TYPE     REASON              OBJECT                               MESSAGE
+33m         Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 6; reason: All metrics below target
+33m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled down replica set php-apache-8cdd76588 from 7 to 6
+22m         Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 3; reason: All metrics below target
+22m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled down replica set php-apache-8cdd76588 from 6 to 3
+21m         Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 1; reason: All metrics below target
+21m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled down replica set php-apache-8cdd76588 from 3 to 1
+13m         Normal   ScalingReplicaSet   deployment/php-apache                (combined from similar events): Scaled up replica set php-apache-8cdd76588 from 4 to 6
+5m2s        Normal   ScalingReplicaSet   deployment/php-apache                Scaled down replica set php-apache-8cdd76588 from 7 to 1
+3m44s       Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 2; reason: cpu resource utilization (percentage of request) above target
+2m59s       Normal   ScalingReplicaSet   deployment/php-apache                Scaled up replica set php-apache-8cdd76588 from 4 to 6

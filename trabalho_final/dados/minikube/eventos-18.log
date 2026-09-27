@@ -1,0 +1,17 @@
+LAST SEEN   TYPE      REASON                         OBJECT                               MESSAGE
+58m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/php-apache   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+58m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/php-apache   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+57m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/php-apache   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+57m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/php-apache   failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+46m         Warning   FailedRescale                  horizontalpodautoscaler/php-apache   New size: 6; reason: cpu resource utilization (percentage of request) above target; error: etcdserver: request timed out
+43m         Warning   FailedUpdateStatus             horizontalpodautoscaler/php-apache   Operation cannot be fulfilled on horizontalpodautoscalers.autoscaling "php-apache": the object has been modified; please apply your changes to the latest version and try again
+34m         Normal    ScalingReplicaSet              deployment/php-apache                (combined from similar events): Scaled up replica set php-apache-5554b974cc from 1 to 2
+27m         Normal    SuccessfulRescale              horizontalpodautoscaler/php-apache   New size: 4; reason: cpu resource utilization (percentage of request) above target
+24m         Warning   FailedUpdateStatus             horizontalpodautoscaler/php-apache   etcdserver: request timed out
+20m         Warning   FailedRescale                  horizontalpodautoscaler/php-apache   New size: 4; reason: cpu resource utilization (percentage of request) above target; error: etcdserver: request timed out
+15m         Normal    ScalingReplicaSet              deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 1 to 2
+15m         Normal    SuccessfulRescale              horizontalpodautoscaler/php-apache   New size: 2; reason: cpu resource utilization (percentage of request) above target
+6m7s        Normal    ScalingReplicaSet              deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 6 to 1
+3m38s       Normal    SuccessfulRescale              horizontalpodautoscaler/php-apache   (combined from similar events): New size: 2; reason: cpu resource utilization (percentage of request) above target
+34s         Normal    ScalingReplicaSet              deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 4 to 6
+34s         Normal    SuccessfulRescale              horizontalpodautoscaler/php-apache   New size: 6; reason: cpu resource utilization (percentage of request) above target

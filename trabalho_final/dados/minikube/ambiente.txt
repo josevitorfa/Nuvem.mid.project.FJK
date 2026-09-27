@@ -1,0 +1,35 @@
+# Ambiente da campanha - minikube
+data_inicio: 2026-09-24T02:19:07Z
+contexto_kubectl: minikube
+n_execucoes: 20
+load_seconds: 240
+sample_interval: 2
+desvio_relogio_s: -1
+latencia_control_plane_leitura_escrita_ms: 111 203
+
+## versoes
+  Client Version: v1.36.1
+  Kustomize Version: v5.8.1
+  Server Version: v1.35.1
+
+## nos
+  NAME       STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION                      CONTAINER-RUNTIME
+  minikube   Ready    control-plane   22m   v1.35.1   192.168.49.2   <none>        Debian GNU/Linux 12 (bookworm)   6.18.33.2-microsoft-standard-WSL2   docker://29.2.1
+
+## capacidade alocavel
+  NO         CPU_ALOC   MEM_ALOC    INSTANCIA   ZONA
+  minikube   4          8133228Ki   <none>      <none>
+
+## metrics api
+  v1beta1.metrics.k8s.io   kube-system/metrics-server   True   21m
+
+## objetos aplicados
+  NAME                         READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                        SELECTOR
+  deployment.apps/php-apache   2/3     3            2           18m   php-apache   registry.k8s.io/hpa-example   app=php-apache
+  
+  NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE   SELECTOR
+  service/kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP   21m   <none>
+  service/php-apache   ClusterIP   10.99.85.219   <none>        80/TCP    18m   app=php-apache
+  
+  NAME                                             REFERENCE               TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+  horizontalpodautoscaler.autoscaling/php-apache   Deployment/php-apache   cpu: 129%/50%   1         10        2          18m

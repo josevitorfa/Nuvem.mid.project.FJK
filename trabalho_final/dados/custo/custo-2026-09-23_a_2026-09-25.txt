@@ -1,0 +1,14 @@
+# Custo da campanha na AWS
+apurado_em: 2026-09-24T09:20:06Z
+periodo: 2026-09-23 ate 2026-09-25 (fim exclusivo)
+perfil: psi5120
+conta: 759626151695
+
+## total do periodo
+0	USD
+
+## por servico (apenas valores nao nulos)
+
+## por dia
+2026-09-23	0
+2026-09-24	0

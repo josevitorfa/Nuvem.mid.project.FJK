@@ -1,0 +1,14 @@
+LAST SEEN   TYPE      REASON               OBJECT                               MESSAGE
+52m         Warning   FailedRescale        horizontalpodautoscaler/php-apache   New size: 6; reason: cpu resource utilization (percentage of request) above target; error: etcdserver: request timed out
+49m         Warning   FailedUpdateStatus   horizontalpodautoscaler/php-apache   Operation cannot be fulfilled on horizontalpodautoscalers.autoscaling "php-apache": the object has been modified; please apply your changes to the latest version and try again
+40m         Normal    ScalingReplicaSet    deployment/php-apache                (combined from similar events): Scaled up replica set php-apache-5554b974cc from 1 to 2
+30m         Warning   FailedUpdateStatus   horizontalpodautoscaler/php-apache   etcdserver: request timed out
+26m         Warning   FailedRescale        horizontalpodautoscaler/php-apache   New size: 4; reason: cpu resource utilization (percentage of request) above target; error: etcdserver: request timed out
+21m         Normal    SuccessfulRescale    horizontalpodautoscaler/php-apache   New size: 2; reason: cpu resource utilization (percentage of request) above target
+21m         Normal    ScalingReplicaSet    deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 1 to 2
+12m         Normal    ScalingReplicaSet    deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 6 to 1
+9m45s       Normal    SuccessfulRescale    horizontalpodautoscaler/php-apache   (combined from similar events): New size: 2; reason: cpu resource utilization (percentage of request) above target
+6m41s       Normal    SuccessfulRescale    horizontalpodautoscaler/php-apache   New size: 6; reason: cpu resource utilization (percentage of request) above target
+6m41s       Normal    ScalingReplicaSet    deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 4 to 6
+2m40s       Normal    ScalingReplicaSet    deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 2 to 4
+2m40s       Normal    SuccessfulRescale    horizontalpodautoscaler/php-apache   New size: 4; reason: cpu resource utilization (percentage of request) above target

@@ -1,0 +1,14 @@
+# Verificacao pos-destruicao - 2026-09-24T09:19:51Z
+perfil: psi5120 | regiao: us-east-1 | cluster: hpa-final
+
+## clusters EKS remanescentes
+
+## stacks CloudFormation com 'eksctl' no nome
+
+## instancias EC2 ativas
+
+## NAT gateways ativos
+
+## volumes EBS disponiveis (orfaos)
+
+## enderecos IP elasticos alocados

@@ -1,0 +1,20 @@
+LAST SEEN   TYPE     REASON              OBJECT                               MESSAGE
+36m         Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 4; reason: All metrics below target
+36m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 6 to 4
+35m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 4 to 2
+35m         Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 2; reason: All metrics below target
+34m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 2 to 1
+23m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 6 to 3
+23m         Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 3; reason: All metrics below target
+22m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 3 to 1
+22m         Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 1; reason: All metrics below target
+20m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 2 to 4
+18m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 4 to 6
+15m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 2 to 3
+15m         Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 3; reason: cpu resource utilization (percentage of request) above target
+12m         Normal   ScalingReplicaSet   deployment/php-apache                Scaled down replica set php-apache-5554b974cc from 6 to 1
+11m         Normal   ScalingReplicaSet   deployment/php-apache                (combined from similar events): Scaled down replica set php-apache-5554b974cc from 2 to 1
+3m36s       Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 2; reason: cpu resource utilization (percentage of request) above target
+3m36s       Normal   ScalingReplicaSet   deployment/php-apache                Scaled up replica set php-apache-5554b974cc from 1 to 2
+2m37s       Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 4; reason: cpu resource utilization (percentage of request) above target
+36s         Normal   SuccessfulRescale   horizontalpodautoscaler/php-apache   New size: 6; reason: cpu resource utilization (percentage of request) above target

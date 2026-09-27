@@ -1,0 +1,63 @@
+# =============================================================================
+# warmup-daemonset.yaml
+# -----------------------------------------------------------------------------
+# PARA QUE SERVE: garantir que TODOS os nos do cluster ja tenham em cache as
+# duas imagens usadas no experimento ANTES de a campanha comecar.
+#
+# POR QUE IMPORTA: sem isso, a primeira repeticao de cada campanha mede, em
+# parte, o tempo de baixar uma imagem -- e no EKS, com dois nos, um Pod que caia
+# em um no ainda "frio" pagaria esse custo em qualquer repeticao, nao so na
+# primeira. Isso nao contamina a metrica primaria (o tempo de reacao e medido a
+# partir do instante em que o container JA ESTA executando), mas contamina as
+# metricas secundarias de partida do gerador e de tempo ate o regime permanente.
+#
+# Um DaemonSet e a forma direta de expressar "uma copia em cada no". Ele e
+# aplicado, espera-se o rollout, e e removido antes da primeira repeticao --
+# nao fica consumindo recursos durante as medicoes.
+#
+# Uso (feito automaticamente por scripts/10-run-campaign.sh):
+#   kubectl apply -f manifests/warmup-daemonset.yaml
+#   kubectl rollout status daemonset/warmup --timeout=300s
+#   kubectl delete -f manifests/warmup-daemonset.yaml
+# =============================================================================
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: warmup
+  labels:
+    app: warmup
+spec:
+  selector:
+    matchLabels:
+      app: warmup
+  template:
+    metadata:
+      labels:
+        app: warmup
+    spec:
+      # Encerra rapido quando o DaemonSet for removido: nao ha estado a preservar.
+      terminationGracePeriodSeconds: 1
+      containers:
+        # Imagem do gerador de carga.
+        - name: busybox
+          image: busybox:1.28
+          command: ["sh", "-c", "sleep 3600"]
+          resources:
+            requests:
+              cpu: 1m
+              memory: 8Mi
+            limits:
+              cpu: 50m
+              memory: 32Mi
+        # Imagem da aplicacao sob teste. Apenas dorme: o objetivo e puxar a
+        # imagem para o no, nao executar o Apache.
+        - name: app
+          image: registry.k8s.io/hpa-example
+          command: ["sh", "-c", "sleep 3600"]
+          resources:
+            requests:
+              cpu: 1m
+              memory: 8Mi
+            limits:
+              cpu: 50m
+              memory: 64Mi

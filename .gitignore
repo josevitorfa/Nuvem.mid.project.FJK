@@ -5,8 +5,44 @@ kubeconfig*
 .env
 aws-credentials*
 
+# Kubeconfig com token do EKS embutido, gerado durante as campanhas do trabalho
+# final: é credencial viva e de curta duração.
+**/dados/*/kubeconfig-token.yaml*
+
 # Artefatos temporários
 *.log
 *.tmp
 
-!evidencias/**/*.log
+# EXCEÇÃO: os logs sob evidencias/ e sob dados/ NÃO são temporários — são as
+# evidências de execução exigidas pelos enunciados (saídas dos comandos nos
+# estados antes/durante/depois no trabalho intermediário; séries temporais,
+# eventos do controlador, descrição dos ambientes e verificação de limpeza da
+# AWS no trabalho final). Precisam ser versionados.
+#
+# Os padrões cobrem qualquer profundidade porque as evidências são organizadas
+# por integrante (evidencias/<nome>/logs/*.log) e por ambiente
+# (dados/<ambiente>/eventos-NN.log).
+!**/evidencias/**/*.log
+!**/dados/**/*.log
+
+# Arquivos de controle dos scripts de campanha (existem apenas enquanto uma
+# repetição está em andamento).
+**/dados/*/.amostrando
+**/dados/*/.campanha.lock
+
+# Artefatos de compilação do LaTeX. Os PDFs NÃO entram aqui: são os
+# entregáveis e devem ser versionados.
+**/artigo/*.aux
+**/artigo/*.out
+**/artigo/*.synctex.gz
+**/artigo/*.fls
+**/artigo/*.fdb_latexmk
+**/artigo/*.bbl
+**/artigo/*.blg
+**/artigo/missfont.log
+
+# Windows
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk

@@ -1,0 +1,199 @@
+[04:05:56] ############################################################
+[04:05:56] # Campanha eks: 20 repeticoes x 240s de carga
+[04:05:56] # Amostragem a cada 2s | scale-down natural nas 3 primeiras
+[04:05:56] ############################################################
+[04:06:00] acesso rapido ao EKS ativo (token embutido, renovacao a cada 7 min)
+[04:06:01] contexto kubectl: hpa-final
+[04:06:24] ambiente registrado em dados/eks/ambiente.txt
+[04:06:24] aquecendo o cache de imagens em todos os nos...
+[04:06:27]    imagens em cache em todos os nos
+[04:06:35] == repeticao 01/20 (eks) ==
+[04:06:39]    aguardando estado de base...
+[04:06:52]    base atingida (cpu=0%, replicas=1)
+[04:07:05]    latencia do control plane: leitura 510ms | escrita 517ms
+[04:07:10]    carga em execucao desde 2026-09-24T07:07:09Z (submissao->execucao: 2s)
+[04:07:46]    1a decisao de escala em 2026-09-24T07:07:45Z -> reacao = 36s
+[04:11:14]    carga encerrada apos 240s
+[04:11:14]    medindo o scale-down natural (janela de estabilizacao de 300s)...
+[04:17:51]    retorno a 1 replica em 401s
+[04:17:52]    repeticao 01 concluida
+[04:17:52]    tempo total de campanha ate aqui: 11min
+[04:17:52] == repeticao 02/20 (eks) ==
+[04:17:55]    aguardando estado de base...
+[04:18:09]    base atingida (cpu=0%, replicas=1)
+[04:18:22]    latencia do control plane: leitura 511ms | escrita 517ms
+[04:18:26]    carga em execucao desde 2026-09-24T07:18:25Z (submissao->execucao: 1s)
+[04:19:02]    1a decisao de escala em 2026-09-24T07:19:01Z -> reacao = 36s
+[04:22:32]    carga encerrada apos 240s
+[04:22:32]    medindo o scale-down natural (janela de estabilizacao de 300s)...
+[04:28:49]    retorno a 1 replica em 382s
+[04:28:53]    repeticao 02 concluida
+[04:28:53]    tempo total de campanha ate aqui: 22min
+[04:28:53] == repeticao 03/20 (eks) ==
+[04:28:56]    aguardando estado de base...
+[04:29:11]    base atingida (cpu=0%, replicas=1)
+[04:29:24]    latencia do control plane: leitura 510ms | escrita 526ms
+[04:29:28]    carga em execucao desde 2026-09-24T07:29:27Z (submissao->execucao: 1s)
+[04:29:48]    1a decisao de escala em 2026-09-24T07:29:48Z -> reacao = 21s
+[04:33:32]    carga encerrada apos 240s
+[04:33:32]    medindo o scale-down natural (janela de estabilizacao de 300s)...
+[04:39:51]    retorno a 1 replica em 383s
+[04:39:54]    repeticao 03 concluida
+[04:39:54]    tempo total de campanha ate aqui: 33min
+[04:39:54] == repeticao 04/20 (eks) ==
+[04:39:58]    aguardando estado de base...
+[04:40:13]    base atingida (cpu=0%, replicas=1)
+[04:40:30]    latencia do control plane: leitura 643ms | escrita 641ms
+[04:40:36]    carga em execucao desde 2026-09-24T07:40:34Z (submissao->execucao: 2s)
+[04:40:50]    1a decisao de escala em 2026-09-24T07:40:49Z -> reacao = 15s
+[04:44:40]    carga encerrada apos 240s
+[04:44:44]    repeticao 04 concluida
+[04:44:44]    tempo total de campanha ate aqui: 38min
+[04:44:44] == repeticao 05/20 (eks) ==
+[04:44:48]    aguardando estado de base...
+[04:45:36]    base atingida (cpu=0%, replicas=1)
+[04:45:55]    latencia do control plane: leitura 652ms | escrita 645ms
+[04:45:59]    carga em execucao desde 2026-09-24T07:45:59Z (submissao->execucao: 2s)
+[04:46:21]    1a decisao de escala em 2026-09-24T07:46:20Z -> reacao = 21s
+[04:50:04]    carga encerrada apos 240s
+[04:50:06]    repeticao 05 concluida
+[04:50:06]    tempo total de campanha ate aqui: 43min
+[04:50:06] == repeticao 06/20 (eks) ==
+[04:50:09]    aguardando estado de base...
+[04:50:54]    base atingida (cpu=0%, replicas=1)
+[04:51:15]    latencia do control plane: leitura 636ms | escrita 644ms
+[04:51:22]    carga em execucao desde 2026-09-24T07:51:20Z (submissao->execucao: 2s)
+[04:51:36]    1a decisao de escala em 2026-09-24T07:51:35Z -> reacao = 15s
+[04:55:26]    carga encerrada apos 240s
+[04:55:28]    repeticao 06 concluida
+[04:55:28]    tempo total de campanha ate aqui: 48min
+[04:55:28] == repeticao 07/20 (eks) ==
+[04:55:32]    aguardando estado de base...
+[04:56:07]    base atingida (cpu=0%, replicas=1)
+[04:56:25]    latencia do control plane: leitura 621ms | escrita 683ms
+[04:56:30]    carga em execucao desde 2026-09-24T07:56:29Z (submissao->execucao: 2s)
+[04:56:51]    1a decisao de escala em 2026-09-24T07:56:51Z -> reacao = 22s
+[05:00:33]    carga encerrada apos 240s
+[05:00:36]    repeticao 07 concluida
+[05:00:36]    tempo total de campanha ate aqui: 54min
+[05:00:36] == repeticao 08/20 (eks) ==
+[05:00:40]    aguardando estado de base...
+[05:01:23]    base atingida (cpu=0%, replicas=1)
+[05:01:39]    latencia do control plane: leitura 634ms | escrita 639ms
+[05:01:45]    carga em execucao desde 2026-09-24T08:01:43Z (submissao->execucao: 2s)
+[05:02:06]    1a decisao de escala em 2026-09-24T08:02:06Z -> reacao = 23s
+[05:05:49]    carga encerrada apos 240s
+[05:05:51]    repeticao 08 concluida
+[05:05:51]    tempo total de campanha ate aqui: 59min
+[05:05:51] == repeticao 09/20 (eks) ==
+[05:05:54]    aguardando estado de base...
+[05:06:53]    base atingida (cpu=0%, replicas=1)
+[05:07:06]    latencia do control plane: leitura 520ms | escrita 528ms
+[05:07:11]    carga em execucao desde 2026-09-24T08:07:10Z (submissao->execucao: 2s)
+[05:07:37]    1a decisao de escala em 2026-09-24T08:07:36Z -> reacao = 26s
+[05:11:15]    carga encerrada apos 240s
+[05:11:17]    repeticao 09 concluida
+[05:11:17]    tempo total de campanha ate aqui: 64min
+[05:11:17] == repeticao 10/20 (eks) ==
+[05:11:22]    aguardando estado de base...
+[05:11:56]    base atingida (cpu=0%, replicas=1)
+[05:12:09]    latencia do control plane: leitura 518ms | escrita 528ms
+[05:12:14]    carga em execucao desde 2026-09-24T08:12:13Z (submissao->execucao: 2s)
+[05:12:37]    1a decisao de escala em 2026-09-24T08:12:37Z -> reacao = 24s
+[05:16:17]    carga encerrada apos 240s
+[05:16:20]    repeticao 10 concluida
+[05:16:20]    tempo total de campanha ate aqui: 69min
+[05:16:20] == repeticao 11/20 (eks) ==
+[05:16:23]    aguardando estado de base...
+[05:17:10]    base atingida (cpu=0%, replicas=1)
+[05:17:24]    latencia do control plane: leitura 518ms | escrita 523ms
+[05:17:29]    carga em execucao desde 2026-09-24T08:17:28Z (submissao->execucao: 2s)
+[05:17:52]    1a decisao de escala em 2026-09-24T08:17:52Z -> reacao = 24s
+[05:21:32]    carga encerrada apos 240s
+[05:21:35]    repeticao 11 concluida
+[05:21:35]    tempo total de campanha ate aqui: 75min
+[05:21:35] == repeticao 12/20 (eks) ==
+[05:21:38]    aguardando estado de base...
+[05:22:24]    base atingida (cpu=0%, replicas=1)
+[05:22:38]    latencia do control plane: leitura 524ms | escrita 520ms
+[05:22:43]    carga em execucao desde 2026-09-24T08:22:41Z (submissao->execucao: 1s)
+[05:23:09]    1a decisao de escala em 2026-09-24T08:23:08Z -> reacao = 27s
+[05:26:47]    carga encerrada apos 240s
+[05:26:49]    repeticao 12 concluida
+[05:26:49]    tempo total de campanha ate aqui: 80min
+[05:26:49] == repeticao 13/20 (eks) ==
+[05:26:52]    aguardando estado de base...
+[05:27:39]    base atingida (cpu=0%, replicas=1)
+[05:27:52]    latencia do control plane: leitura 513ms | escrita 519ms
+[05:27:56]    carga em execucao desde 2026-09-24T08:27:55Z (submissao->execucao: 1s)
+[05:28:24]    1a decisao de escala em 2026-09-24T08:28:24Z -> reacao = 29s
+[05:32:00]    carga encerrada apos 240s
+[05:32:00]    repeticao 13 concluida
+[05:32:00]    tempo total de campanha ate aqui: 85min
+[05:32:01] == repeticao 14/20 (eks) ==
+[05:32:04]    aguardando estado de base...
+[05:32:42]    base atingida (cpu=0%, replicas=1)
+[05:32:56]    latencia do control plane: leitura 522ms | escrita 524ms
+[05:33:00]    carga em execucao desde 2026-09-24T08:32:59Z (submissao->execucao: 1s)
+[05:33:25]    1a decisao de escala em 2026-09-24T08:33:24Z -> reacao = 25s
+[05:37:04]    carga encerrada apos 240s
+[05:37:06]    repeticao 14 concluida
+[05:37:06]    tempo total de campanha ate aqui: 90min
+[05:37:06] == repeticao 15/20 (eks) ==
+[05:37:09]    aguardando estado de base...
+[05:37:54]    base atingida (cpu=0%, replicas=1)
+[05:38:07]    latencia do control plane: leitura 514ms | escrita 533ms
+[05:38:12]    carga em execucao desde 2026-09-24T08:38:11Z (submissao->execucao: 2s)
+[05:38:25]    1a decisao de escala em 2026-09-24T08:38:25Z -> reacao = 14s
+[05:42:16]    carga encerrada apos 240s
+[05:42:17]    repeticao 15 concluida
+[05:42:17]    tempo total de campanha ate aqui: 95min
+[05:42:17] == repeticao 16/20 (eks) ==
+[05:42:20]    aguardando estado de base...
+[05:42:54]    base atingida (cpu=8%, replicas=1)
+[05:43:08]    latencia do control plane: leitura 519ms | escrita 527ms
+[05:43:13]    carga em execucao desde 2026-09-24T08:43:12Z (submissao->execucao: 2s)
+[05:43:41]    1a decisao de escala em 2026-09-24T08:43:40Z -> reacao = 28s
+[05:47:16]    carga encerrada apos 240s
+[05:47:18]    repeticao 16 concluida
+[05:47:18]    tempo total de campanha ate aqui: 100min
+[05:47:18] == repeticao 17/20 (eks) ==
+[05:47:21]    aguardando estado de base...
+[05:48:12]    base atingida (cpu=0%, replicas=1)
+[05:48:25]    latencia do control plane: leitura 520ms | escrita 524ms
+[05:48:30]    carga em execucao desde 2026-09-24T08:48:29Z (submissao->execucao: 2s)
+[05:48:56]    1a decisao de escala em 2026-09-24T08:48:56Z -> reacao = 27s
+[05:52:33]    carga encerrada apos 240s
+[05:52:37]    repeticao 17 concluida
+[05:52:37]    tempo total de campanha ate aqui: 106min
+[05:52:37] == repeticao 18/20 (eks) ==
+[05:52:40]    aguardando estado de base...
+[05:53:24]    base atingida (cpu=0%, replicas=1)
+[05:53:37]    latencia do control plane: leitura 519ms | escrita 525ms
+[05:53:42]    carga em execucao desde 2026-09-24T08:53:41Z (submissao->execucao: 2s)
+[05:54:11]    1a decisao de escala em 2026-09-24T08:54:11Z -> reacao = 30s
+[05:57:45]    carga encerrada apos 240s
+[05:57:48]    repeticao 18 concluida
+[05:57:48]    tempo total de campanha ate aqui: 111min
+[05:57:48] == repeticao 19/20 (eks) ==
+[05:57:51]    aguardando estado de base...
+[05:58:30]    base atingida (cpu=0%, replicas=1)
+[05:58:43]    latencia do control plane: leitura 517ms | escrita 520ms
+[05:58:48]    carga em execucao desde 2026-09-24T08:58:47Z (submissao->execucao: 2s)
+[05:59:12]    1a decisao de escala em 2026-09-24T08:59:11Z -> reacao = 24s
+[06:02:52]    carga encerrada apos 240s
+[06:02:54]    repeticao 19 concluida
+[06:02:54]    tempo total de campanha ate aqui: 116min
+[06:02:54] == repeticao 20/20 (eks) ==
+[06:02:57]    aguardando estado de base...
+[06:03:43]    base atingida (cpu=0%, replicas=1)
+[06:03:56]    latencia do control plane: leitura 527ms | escrita 522ms
+[06:04:01]    carga em execucao desde 2026-09-24T09:04:00Z (submissao->execucao: 2s)
+[06:04:27]    1a decisao de escala em 2026-09-24T09:04:27Z -> reacao = 27s
+[06:08:05]    carga encerrada apos 240s
+[06:08:07]    repeticao 20 concluida
+[06:08:07]    tempo total de campanha ate aqui: 121min
+[06:08:07] ############################################################
+[06:08:07] # Campanha eks concluida em 121 min
+[06:08:07] # Dados em dados/eks/
+[06:08:07] ############################################################

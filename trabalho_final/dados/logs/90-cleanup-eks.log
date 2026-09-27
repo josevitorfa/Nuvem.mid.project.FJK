@@ -1,0 +1,50 @@
+[06:08:42] Removendo os objetos da aplicacao...
+horizontalpodautoscaler.autoscaling "php-apache" deleted from default namespace
+service "php-apache" deleted from default namespace
+deployment.apps "php-apache" deleted from default namespace
+[06:08:48] Destruindo o cluster EKS 'hpa-final' (~10-15 min)...
+2026-09-24 06:08:50 [ℹ]  deleting EKS cluster "hpa-final"
+2026-09-24 06:08:51 [ℹ]  will drain 0 unmanaged nodegroup(s) in cluster "hpa-final"
+2026-09-24 06:08:51 [ℹ]  starting parallel draining, max in-flight of 1
+2026-09-24 06:08:52 [ℹ]  deleted 0 Fargate profile(s)
+2026-09-24 06:08:53 [✔]  kubeconfig has been updated
+2026-09-24 06:08:53 [ℹ]  cleaning up AWS load balancers created by Kubernetes objects of Kind Service, Ingress, or Gateway
+2026-09-24 06:08:57 [ℹ]  
+2 sequential tasks: { delete nodegroup "workers", delete cluster control plane "hpa-final" 
+}
+2026-09-24 06:08:58 [ℹ]  will delete stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 06:08:58 [ℹ]  waiting for stack "eksctl-hpa-final-nodegroup-workers" to get deleted
+2026-09-24 06:08:58 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 06:09:29 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 06:10:12 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 06:11:33 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 06:12:26 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 06:14:25 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 06:15:11 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 06:17:01 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 06:18:07 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 06:18:08 [ℹ]  will delete stack "eksctl-hpa-final-cluster"
+2026-09-24 06:18:08 [ℹ]  waiting for stack "eksctl-hpa-final-cluster" to get deleted
+2026-09-24 06:18:08 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 06:18:39 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 06:19:10 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 06:19:50 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 06:19:51 [✔]  all cluster resources were deleted
+[06:19:51] Verificando o que restou na regiao us-east-1...
+# Verificacao pos-destruicao - 2026-09-24T09:19:51Z
+perfil: psi5120 | regiao: us-east-1 | cluster: hpa-final
+
+## clusters EKS remanescentes
+
+## stacks CloudFormation com 'eksctl' no nome
+
+## instancias EC2 ativas
+
+## NAT gateways ativos
+
+## volumes EBS disponiveis (orfaos)
+
+## enderecos IP elasticos alocados
+
+[06:19:59] Verificacao salva em dados/limpeza/verificacao-20260924T090842Z.log
+[06:19:59] Saidas vazias (ou 'None') nas secoes acima significam que nada ficou orfao.

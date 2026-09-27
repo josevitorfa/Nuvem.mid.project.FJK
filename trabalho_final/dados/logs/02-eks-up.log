@@ -1,0 +1,100 @@
+[01:43:48] [0/5] Identidade AWS (perfil psi5120) antes de criar recursos pagos:
+{
+    "UserId": "AIDA3BXJ7G4HUKEZKZ2PA",
+    "Account": "759626151695",
+    "Arn": "arn:aws:iam::759626151695:user/user_lab"
+}
+[01:43:55] [1/5] Criando o cluster EKS 'hpa-final' (~15-20 min)...
+2026-09-24 01:44:02 [ℹ]  eksctl version 0.230.0
+2026-09-24 01:44:02 [ℹ]  using region us-east-1
+2026-09-24 01:44:03 [ℹ]  setting availability zones to [us-east-1f us-east-1b]
+2026-09-24 01:44:03 [ℹ]  subnets for us-east-1f - public:192.168.0.0/19 private:192.168.64.0/19
+2026-09-24 01:44:03 [ℹ]  subnets for us-east-1b - public:192.168.32.0/19 private:192.168.96.0/19
+2026-09-24 01:44:03 [ℹ]  nodegroup "workers" will use "" [AmazonLinux2023/1.34]
+2026-09-24 01:44:03 [!]  Auto Mode will be enabled by default in an upcoming release of eksctl. This means managed node groups and managed networking add-ons will no longer be created by default. To maintain current behavior, explicitly set 'autoModeConfig.enabled: false' in your cluster configuration. Learn more: https://eksctl.io/usage/auto-mode/
+2026-09-24 01:44:03 [ℹ]  using Kubernetes version 1.34
+2026-09-24 01:44:03 [ℹ]  creating EKS cluster "hpa-final" in "us-east-1" region with managed nodes
+2026-09-24 01:44:03 [ℹ]  will create 2 separate CloudFormation stacks for cluster itself and the initial managed nodegroup
+2026-09-24 01:44:03 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=us-east-1 --cluster=hpa-final'
+2026-09-24 01:44:03 [ℹ]  Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster "hpa-final" in "us-east-1"
+2026-09-24 01:44:03 [ℹ]  CloudWatch logging will not be enabled for cluster "hpa-final" in "us-east-1"
+2026-09-24 01:44:03 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=us-east-1 --cluster=hpa-final'
+2026-09-24 01:44:03 [ℹ]  default addons kube-proxy, coredns, metrics-server, vpc-cni were not specified, will install them as EKS addons
+2026-09-24 01:44:03 [ℹ]  
+2 sequential tasks: { create cluster control plane "hpa-final", 
+    2 sequential sub-tasks: { 
+        2 sequential sub-tasks: { 
+            1 task: { create addons },
+            wait for control plane to become ready,
+        },
+        create managed nodegroup "workers",
+    } 
+}
+2026-09-24 01:44:03 [ℹ]  building cluster stack "eksctl-hpa-final-cluster"
+2026-09-24 01:44:04 [ℹ]  deploying stack "eksctl-hpa-final-cluster"
+2026-09-24 01:44:34 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 01:45:06 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 01:46:07 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 01:47:08 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 01:48:08 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 01:49:09 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 01:50:09 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 01:51:09 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 01:52:10 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-cluster"
+2026-09-24 01:52:16 [ℹ]  creating addon: kube-proxy
+2026-09-24 01:52:17 [ℹ]  successfully created addon: kube-proxy
+2026-09-24 01:52:17 [ℹ]  creating addon: coredns
+2026-09-24 01:52:18 [ℹ]  successfully created addon: coredns
+2026-09-24 01:52:19 [!]  recommended policies were found for "vpc-cni" addon, but since OIDC is disabled on the cluster, eksctl cannot configure the requested permissions; the recommended way to provide IAM permissions for "vpc-cni" addon is via pod identity associations; after addon creation is completed, add all recommended policies to the config file, under `addon.PodIdentityAssociations`, and run `eksctl update addon`
+2026-09-24 01:52:19 [ℹ]  creating addon: vpc-cni
+2026-09-24 01:52:19 [ℹ]  successfully created addon: vpc-cni
+2026-09-24 01:54:24 [ℹ]  building managed nodegroup stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 01:54:27 [ℹ]  deploying stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 01:54:28 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 01:55:16 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 01:55:48 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 01:56:23 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 01:58:05 [ℹ]  waiting for CloudFormation stack "eksctl-hpa-final-nodegroup-workers"
+2026-09-24 01:58:05 [ℹ]  waiting for the control plane to become ready
+2026-09-24 01:58:05 [✔]  saved kubeconfig as "C:\\Users\\Windows11\\.kube\\config"
+2026-09-24 01:58:05 [ℹ]  no tasks
+2026-09-24 01:58:05 [✔]  all EKS cluster resources for "hpa-final" have been created
+2026-09-24 01:58:07 [ℹ]  nodegroup "workers" has 2 node(s)
+2026-09-24 01:58:07 [ℹ]  node "ip-192-168-22-142.ec2.internal" is ready
+2026-09-24 01:58:07 [ℹ]  node "ip-192-168-55-127.ec2.internal" is ready
+2026-09-24 01:58:07 [ℹ]  waiting for at least 2 node(s) to become ready in "workers"
+2026-09-24 01:58:07 [ℹ]  nodegroup "workers" has 2 node(s)
+2026-09-24 01:58:07 [ℹ]  node "ip-192-168-22-142.ec2.internal" is ready
+2026-09-24 01:58:07 [ℹ]  node "ip-192-168-55-127.ec2.internal" is ready
+2026-09-24 01:58:07 [✔]  created 1 managed nodegroup(s) in cluster "hpa-final"
+2026-09-24 01:58:08 [ℹ]  creating addon: metrics-server
+2026-09-24 01:58:08 [ℹ]  successfully created addon: metrics-server
+2026-09-24 01:58:14 [ℹ]  kubectl command should work with "C:\\Users\\Windows11\\.kube\\config", try 'kubectl get nodes'
+2026-09-24 01:58:14 [✔]  EKS cluster "hpa-final" in "us-east-1" region is ready
+[01:58:14] [2/5] Apontando o kubectl para o EKS...
+Added new context arn:aws:eks:us-east-1:759626151695:cluster/hpa-final to C:\Users\Windows11\.kube\config
+[01:58:19] [3/5] Garantindo o Metrics Server...
+[01:58:26]       addon gerenciado ja presente; o manifesto do SIG NAO sera aplicado.
+Waiting for deployment "metrics-server" rollout to finish: 0 of 2 updated replicas are available...
+Waiting for deployment "metrics-server" rollout to finish: 1 of 2 updated replicas are available...
+deployment "metrics-server" successfully rolled out
+[01:58:38]       validando a Metrics API (verificacao que realmente importa):
+NAME                     SERVICE                      AVAILABLE   AGE
+v1beta1.metrics.k8s.io   kube-system/metrics-server   True        27s
+[01:58:41] [4/5] Aplicando Deployment, Service e HPA...
+deployment.apps/php-apache created
+service/php-apache created
+horizontalpodautoscaler.autoscaling/php-apache created
+deployment "php-apache" successfully rolled out
+[01:58:57] [5/5] Estado inicial:
+NAME                             STATUS   ROLES    AGE     VERSION                INTERNAL-IP      EXTERNAL-IP      OS-IMAGE                        KERNEL-VERSION                     CONTAINER-RUNTIME
+ip-192-168-22-142.ec2.internal   Ready    <none>   2m41s   v1.34.11-eks-a887778   192.168.22.142   100.52.219.161   Amazon Linux 2023.12.20260914   6.12.103-127.188.amzn2023.x86_64   containerd://2.2.7+unknown
+ip-192-168-55-127.ec2.internal   Ready    <none>   2m49s   v1.34.11-eks-a887778   192.168.55.127   52.207.213.55    Amazon Linux 2023.12.20260914   6.12.103-127.188.amzn2023.x86_64   containerd://2.2.7+unknown
+NAME         READY   UP-TO-DATE   AVAILABLE   AGE
+php-apache   1/1     1            1           18s
+NAME         REFERENCE               TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+php-apache   Deployment/php-apache   cpu: <unknown>/50%   1         10        0          11s
+
+[01:59:05] Cluster EKS pronto.
+[01:59:05] Proximo passo: bash scripts/10-run-campaign.sh eks 20
+[01:59:05] LEMBRETE: ao terminar, bash scripts/90-cleanup-eks.sh (o cluster e cobrado por hora).
